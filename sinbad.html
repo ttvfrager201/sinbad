@@ -681,7 +681,7 @@
 .shaky-button {
     padding: 20px 50px;
     border-radius: 50px;
-    font-size: 20px;
+    font-size: 25px;
     animation: shake 1s infinite alternate;
     background-color: #e3b71a; /* Using the gold/yellow color from the image */
     color: #000000; /* Black text for high contrast on yellow */
@@ -701,15 +701,6 @@
     100% { transform: translateX(5px); }
 }
 
-/* Add button text content if it's not appearing */
-.shaky-button::after {
-    content: "Book Now"; /* Replace with your actual button text */
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
         
         /* Responsive Design */
         @media (max-width: 992px) {
