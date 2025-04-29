@@ -683,27 +683,33 @@
     border-radius: 50px;
     font-size: 20px;
     animation: shake 1s infinite alternate;
-    background-color: var(--secondary);
-    color: #000000; /* Changed from var(--dark) to ensure text visibility */
+    background-color: #e3b71a; /* Using the gold/yellow color from the image */
+    color: #000000; /* Black text for high contrast on yellow */
     font-weight: bold;
     text-transform: uppercase;
     display: inline-block;
     text-decoration: none;
-    transition: transform 0.2s ease-in-out;
+    position: relative; /* Add position for the content */
 }
 
-.shaky-button:hover {
-    transform: scale(1.05);
+/* Define the shake animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
 }
-        }
-        
-        @keyframes shake {
-            0% { transform: translate(0, 0); }
-            25% { transform: translate(2px, -2px); }
-            50% { transform: translate(-2px, 2px); }
-            75% { transform: translate(2px, 2px); }
-            100% { transform: translate(-2px, -2px); }
-        }
+
+/* Add button text content if it's not appearing */
+.shaky-button::after {
+    content: "Book Now"; /* Replace with your actual button text */
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
         
         /* Responsive Design */
         @media (max-width: 992px) {
