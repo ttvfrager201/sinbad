@@ -680,16 +680,29 @@
         /* Shaky Button Animation */
 
 .shaky-button {
-            padding: 12px 30px;
+    padding: 12px 30px;
     border-radius: 50px;
-            background-color: var(--secondary);
-            color: var(--dark);
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 2px;
-            opacity: 0;
+    background-color: var(--secondary);
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 1; /* Make it visible */
+    transition: transform 0.2s ease;
+}
+
+/* Optional shake effect on hover */
+.shaky-button:hover {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
 }
 
         
