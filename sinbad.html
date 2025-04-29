@@ -680,7 +680,6 @@
         /* Shaky Button Animation */
 
 .shaky-button {
-   display: inline-block;
             padding: 12px 30px;
     border-radius: 50px;
             background-color: var(--secondary);
@@ -690,20 +689,9 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             border-radius: 2px;
-            transition: all 0.3s ease;
             opacity: 0;
-            animation: fadeIn 1s ease forwards 1s;
 }
 
-
-/* Define the shake animation */
-@keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(5px); }
-}
         
         /* Responsive Design */
         @media (max-width: 992px) {
