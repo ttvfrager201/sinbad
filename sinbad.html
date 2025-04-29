@@ -680,39 +680,21 @@
         /* Shaky Button Animation */
 
 .shaky-button {
-    padding: 20px 50px;
+   display: inline-block;
+            padding: 12px 30px;
     border-radius: 50px;
-    font-size: 20px;
-    animation: shake 1s infinite alternate;
-    background-color: #e3b71a; /* Yellow background */
-    font-weight: 900;
-    text-transform: uppercase;
-    display: inline-block;
-    text-decoration: none;
-    position: relative;
-    /* Remove color property entirely */
-    color: transparent; /* Hide the original text */
+            background-color: var(--secondary);
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 1s;
 }
 
-/* Create new text using a pseudo-element that we can fully control */
-.shaky-button:before {
-    content: "BOOK NOW"; /* Match your button text exactly */
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000000;
-    background: none;
-    font-weight: 900;
-    font-size: 20px;
-    text-transform: uppercase;
-    z-index: 2;
-    pointer-events: none;
-}
 
 /* Define the shake animation */
 @keyframes shake {
