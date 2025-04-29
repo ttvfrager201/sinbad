@@ -684,17 +684,34 @@
     border-radius: 50px;
     font-size: 20px;
     animation: shake 1s infinite alternate;
-    background-color: #e3b71a; /* Yellow button background */
-    color: #000000 !important; /* Force black text with !important */
-    font-weight: 900; /* Extra bold */
+    background-color: #e3b71a; /* Yellow background */
+    font-weight: 900;
     text-transform: uppercase;
     display: inline-block;
     text-decoration: none;
-    text-shadow: none;
-    opacity: 1;
-    -webkit-text-fill-color: #000000 !important; /* For WebKit browsers */
-    -moz-text-fill-color: #000000 !important; /* For Firefox */
-    -ms-text-fill-color: #000000 !important; /* For IE/Edge */
+    position: relative;
+    /* Remove color property entirely */
+    color: transparent; /* Hide the original text */
+}
+
+/* Create new text using a pseudo-element that we can fully control */
+.shaky-button:before {
+    content: "BOOK NOW"; /* Match your button text exactly */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    background: none;
+    font-weight: 900;
+    font-size: 20px;
+    text-transform: uppercase;
+    z-index: 2;
+    pointer-events: none;
 }
 
 /* Define the shake animation */
@@ -705,7 +722,6 @@
     75% { transform: translateX(-5px); }
     100% { transform: translateX(5px); }
 }
-
         
         /* Responsive Design */
         @media (max-width: 992px) {
