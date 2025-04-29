@@ -681,7 +681,7 @@
 .shaky-button {
     padding: 20px 50px;
     border-radius: 50px;
-    font-size: 25px;
+    font-size: 20px;
     animation: shake 1s infinite alternate;
     background-color: #e3b71a; /* Using the gold/yellow color from the image */
     color: #000000; /* Black text for high contrast on yellow */
@@ -689,7 +689,8 @@
     text-transform: uppercase;
     display: inline-block;
     text-decoration: none;
-    position: relative; /* Add position for the content */
+    text-shadow: none; /* Remove any text shadows that might affect visibility */
+    opacity: 1; /* Ensure full opacity */
 }
 
 /* Define the shake animation */
