@@ -678,20 +678,23 @@
         }
         
         /* Shaky Button Animation */
+
 .shaky-button {
     padding: 20px 50px;
     border-radius: 50px;
     font-size: 20px;
     animation: shake 1s infinite alternate;
-    background-color: #e3b71a; /* Using the gold/yellow color from the image */
-    color: #000000; /* Black text for high contrast on yellow */
-    -webkit-text-fill-color: #000000;
-    font-weight: 900;
+    background-color: #e3b71a; /* Yellow button background */
+    color: #000000 !important; /* Force black text with !important */
+    font-weight: 900; /* Extra bold */
     text-transform: uppercase;
     display: inline-block;
     text-decoration: none;
-    text-shadow: none; /* Remove any text shadows that might affect visibility */
-    opacity: 1; /* Ensure full opacity */
+    text-shadow: none;
+    opacity: 1;
+    -webkit-text-fill-color: #000000 !important; /* For WebKit browsers */
+    -moz-text-fill-color: #000000 !important; /* For Firefox */
+    -ms-text-fill-color: #000000 !important; /* For IE/Edge */
 }
 
 /* Define the shake animation */
