@@ -995,7 +995,10 @@
                     <p>For special requests or group bookings, please contact us directly.</p>
                 </div>
                 <div class="contact-form">
-                    <form id="appointmentForm">
+                    <form action="https://formsubmit.co/sinbadhairstyle01@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="thanks.html">
+                    
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="name" required>
@@ -1122,14 +1125,6 @@
         window.addEventListener('scroll', fadeInOnScroll);
         window.addEventListener('load', fadeInOnScroll);
         
-        // Form submission
-        const appointmentForm = document.getElementById('appointmentForm');
-        
-        appointmentForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for booking! We will confirm your appointment shortly.');
-            appointmentForm.reset();
-        });
     </script>
 </body>
 </html>
